@@ -13,8 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 try
 {
-    DbProviderFactories.RegisterFactory("Npgsql", Npgsql.NpgsqlFactory.Instance);// typeof(Npgsql.NpgsqlFactory));
-    //Db.odbFood = new TLogDatabase("Npgsql", builder.Configuration["ConnectionStrings:FOOD"]);
+    DbProviderFactories.RegisterFactory("Npgsql", Npgsql.NpgsqlFactory.Instance);
 
     Db.connStrFood = builder.Configuration["ConnectionStrings:FOOD"];
 
@@ -25,11 +24,6 @@ try
         DbProviderFactories.RegisterFactory("Microsoft.Data.SqlClient", SqlClientFactory.Instance);
 
         Db.connStrSCH = builder.Configuration["ConnectionStrings:SCH"];
-        //Db.odbHotel = new TLogDatabase("Microsoft.Data.SqlClient", "192.168.0.35", "sagres", "sa", "contabil*1");
-        //Db.odbHotel.oConn.ConnectionString = builder.Configuration["ConnectionStrings:SCH"];
-        //Db.odbHotel.Port = 1433;
-
-        //Db.connStrSCH = builder.Configuration["ConnectionStrings:SCH"];
     }
     
     mod = builder.Configuration["Modulos:SCEF"];
@@ -41,11 +35,8 @@ try
             DbProviderFactories.RegisterFactory("FirebirdSql.Data.FirebirdClient", FirebirdClientFactory.Instance);
             var connectionString = builder.Configuration["ConnectionStrings:SCEF"];
             Db.connStrSCEF = connectionString;
-            //var connection = new TLogDatabase("FirebirdSql.Data.FirebirdClient", "192.168.0.35", "H:\\Bancos_Teste\\ESTOQUE_PBAIXO_BR.IB", "SYSDBA", "contabil");
-            //var connection = new TLogDatabase("FirebirdSql.Data.FirebirdClient", connectionString);
-            //H:\\Bancos_Teste\\ESTOQUE_PBAIXO_BR.IB
+
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-            //connection.Open();
             Console.WriteLine("Conexão bem-sucedida!");
         }
         catch (Exception ex)
