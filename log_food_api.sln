@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "log_food_api", "log_food_api.csproj", "{FCAA9FD1-7DB2-4444-83E0-DD509372D622}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCAA9FD1-7DB2-4444-83E0-DD509372D622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCAA9FD1-7DB2-4444-83E0-DD509372D622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCAA9FD1-7DB2-4444-83E0-DD509372D622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCAA9FD1-7DB2-4444-83E0-DD509372D622}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1AE7A7BC-705C-4BB1-A0BA-ED064543DEBA}
+	EndGlobalSection
+EndGlobal
